@@ -1,45 +1,17 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Learn how to vibrate your mobile phone on the web using the vibration API - Ilias Ism - Illyism</title>
-    
-    <link rel="stylesheet" href="/css/main.css?v=6e809444">
-   
+    <title>Demos API Vibrate w3c </title>
     
 </head>
 <body>
 
-<p>The vibration API is implemented in <code>navigator.vibrate</code>. So calling the function makes your phone vibrate. You can test if your browser is recent enough to have the <code>vibrate</code> function in <code>navigator</code>.</p>
-<p>Mozilla had their own implementation <code>mozVibrate</code> so some browsers may support that instead.</p>
-<pre><code class="lang-javascript">var canVibrate = &quot;vibrate&quot; in navigator || &quot;mozVibrate&quot; in navigator;
-
-if (canVibrate &amp;&amp; !(&quot;vibrate&quot; in navigator))
-    navigator.vibrate = navigator.mozVibrate;
-</code></pre>
-<p>However, this doesn&#39;t mean that your device can vibrate. Just that it&#39;s recent enough. There are a few requirements you need to meet.</p>
-<ol>
-<li>You need the hardware for it.</li>
-<li>The page needs to be visible.</li>
-<li>Browser-specific implementation prevents the vibration.</li>
-</ol>
 <h1 id="usage">Usage</h1>
-<p>The <code>navigator.vibrate</code> function either accepts a number or an array of numbers.</p>
-<blockquote>
-<p>In the following example the device will vibrate for <strong>1000</strong> milliseconds (ms):</p>
-<p><a class="example-2 ui small teal pointing below label">Test Code</a></p>
-</blockquote>
-<pre><code class="lang-javascript">// vibrate for 1000 ms
-navigator.vibrate(1000);
-
-// or alternatively
-navigator.vibrate([1000]);
-</code></pre>
-<p>The vibration pattern is formed by milliseconds of duration of the vibration and the duration of the waiting period.</p>
-<blockquote>
+<button class="my-btn btn-lrg gradient-green" type="button" onclick="navigator.vibrate([1000,      500,    1000])"> Vibrate</button>
 <p>In this example the devices will vibrate for <strong>1000</strong> ms, wait <strong>500</strong> ms and vibrate again.</p>
 <p><a class="example-3 ui small teal pointing below label">Test Code</a></p>
 </blockquote>
