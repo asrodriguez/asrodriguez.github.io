@@ -11,7 +11,7 @@
 <body>
 
 <h1 id="usage">Usage</h1>
-<button class="my-btn btn-lrg gradient-green" type="button" onclick="navigator.vibrate([1000,      500,    1000])"> Vibrate</button>
+<button onclick="navigator.vibrate([1000,      500,    1000])"> Vibrate</button>
 <p>In this example the devices will vibrate for <strong>1000</strong> ms, wait <strong>500</strong> ms and vibrate again.</p>
 <p><a class="example-3 ui small teal pointing below label">Test Code</a></p>
 </blockquote>
@@ -182,7 +182,7 @@ $(&quot;.button&quot;).vibrate({
 <h2 id="song-patterns">Song Patterns</h2>
 <p><a href="https://www.reddit.com/user/Groggie">Groggie</a> mentioned his <a href="https://gearside.com/cool-vibration-patterns-for-mobile-devices/ Custom vibration patterns for mobile devices">blog post</a> on using the Vibration API for music and theme songs. It&#39;s a really cool example of what can be done using the Vibration API and some creative thought. Click on the titles below to play.</p>
 <ul>
-<li><a class="song-1"><i class="icon play sign small"></i>Super Mario Theme Intro</a></li>
+<li><button onclick="navigator.vibrate([125,75,125,275,200,275,125,75,125,275,200,600,200,600])">Super Mario Theme Intro</button></li>
 </ul>
 <pre><code class="lang-javascript">navigator.vibrate([125,75,125,275,200,275,125,75,125,275,200,600,200,600]);
 </code></pre>
