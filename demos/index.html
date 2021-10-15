@@ -10,25 +10,25 @@
 </head>
 <body>
 
-<h1 id="usage">Usage</h1>
-<button onclick="navigator.vibrate([1000,      500,    1000])"> Vibrate</button>
-<p>In this example the devices will vibrate for <strong>1000</strong> ms, wait <strong>500</strong> ms and vibrate again.</p>
-<p><a class="example-3 ui small teal pointing below label">Test Code</a></p>
-</blockquote>
+<h1 id="usage">Uso</h1>
+<h2>Vibrar</h2>
+<p>En este ejemplo, el teléfono vibra por  <strong>1000</strong> ms, espera  <strong>500</strong> ms y vibra otra vez.</p>
+<button onclick="navigator.vibrate([1000,      500,    1000])"> Probar</button>
+
 <pre><code class="lang-javascript">// device will     vibrate    wait    vibrate
 navigator.vibrate([1000,      500,    1000]);
 </code></pre>
-<p>Any new call stops the previous vibration sequence. If the page is no longer visible, like locking the device, minimizing the window, moving to another tab then the vibration also stops.</p>
+<p>Otra llamada, detiene la secuencia anterior.</p>
 <blockquote>
-<p>In this example the devices will stop vibrating.</p>
-<p><a class="example-4 ui small teal pointing below label">Test Code</a></p>
+<p>En este ejemplo se detiene la vibración.</p>
+<button onclick="navigator.vibrate([])"> Probar</button>
 </blockquote>
 <pre><code class="lang-javascript">// Stop vibrating
 navigator.vibrate();
 navigator.vibrate(0);
 navigator.vibrate([]);
 </code></pre>
-<h2 id="start-stop">Start / Stop</h2>
+<h2 id="start-stop">Iniciar / Terminar </h2>
 <p>We can keep vibrating until the user stops touching the device. The vibration stops after a while though. But it&#39;s not meant to be pressed infinitely anyway.</p>
 <blockquote>
 <p>In this example the device will keep vibrating until the touch event has stopped</p>
@@ -205,8 +205,7 @@ $(&quot;.button&quot;).vibrate({
 <p>Here are some other links to get you some inspiration:</p>
 <ul>
 <li>A game: <a href="https://basicallydan.github.io/skifree.js/">SkiFree</a></li>
-<li>Vibrator / Beethoven simulator <a href="https://docmenthol.serverbros.co.uk/">Dildonica</a></li>
-</ul>
+
 <hr>
 <p>I also made a slideshow:  <strong> <a href="https://www.slideshare.net/illyism/using-32047309" title="Using The Vibration API For The Greater Good" target="_blank">Learn About The Vibration API</a> </strong> from <strong><a href="https://www.slideshare.net/illyism" target="_blank">Ilias Ism</a></strong>. Feel free to share it and show it around.</p>
 <iframe src="https://www.slideshare.net/slideshow/embed_code/32047309?rel=0" width="100%" height="600px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen></iframe>
