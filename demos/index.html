@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preload" href="/css/main.css?v=6e809444" as="style">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Learn how to vibrate your mobile phone on the web using the vibration API - Ilias Ism - Illyism</title>
+    
+     <meta name="description" content="Vibration API - Usage, libraries and use cases. Vibrate your device."> 
+    <meta property="og:site_name" content="Ilias Ism" />
+     <meta property="og:title" content="Learn how to vibrate your mobile phone on the web using the vibration API" /> 
+     <meta property="og:description" content="Vibration API - Usage, libraries and use cases. Vibrate your device." /> 
+    <meta property="og:url" content="https://il.ly/journal/vibrate-mobile-phone-web-vibration-api/" />
+    <link rel="canonical" href="https://il.ly/journal/vibrate-mobile-phone-web-vibration-api/" />
+     <meta property="og:image" content="https://res.cloudinary.com/keystone-demo/image/upload/v1436883619/ozsvbe6agununyea7c17.png" /> 
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+     <meta name="twitter:title" content="Learn how to vibrate your mobile phone on the web using the vibration API" /> 
+    <meta name="twitter:creator" content="@illyism" />
+     <meta name="twitter:image" content="https://res.cloudinary.com/keystone-demo/image/upload/v1436883619/ozsvbe6agununyea7c17.png" /> 
+    <meta property="og:locale" content="en" />
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <link type="application/atom+xml" rel="alternate" href="https://il.ly/feed.xml" title="Ilias Ism" />
+    <link type="application/rss+xml" rel="alternate" href="https://il.ly/feed.rss" title="Ilias Ism" />
+    <link type="application/json" rel="alternate" href="https://il.ly/feed.json" title="Ilias Ism" />
+
+    <link rel="stylesheet" href="/css/main.css?v=6e809444">
+    
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-28191312-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-28191312-4');
+    </script>
+    
+</head>
+<body>
+    <div data-server-rendered="true" class="app flex flex-col min-h-screen"><div class="bg-primary-950 max-w-full px-4"><div class="mx-auto max-w-3xl uppercase font-bold"><a href="/" class="inline-flex align-center items-center justify-center py-2 text-primary-400 hover:text-primary-300"><svg fill="currentColor" viewBox="0 0 20 20" class="w-4 mr-2"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> <span>Ilias Ism</span></a></div></div> <div class="flex-1 w-full mx-auto px-4 py-12"><div class="max-w-3xl mx-auto text-center"><span class="inline-block py-2 px-4 text-xs uppercase border border-pink-500 text-pink-500 rounded-full">published over 7 years ago</span></div> <div class="w-5/6 sm:w-full max-w-3xl mx-auto mt-4 mb-16"><h1 class="text-2xl sm:text-5xl font-sans font-extrabold leading-tight text-center text-primary-100">Learn how to vibrate your mobile phone on the web using the vibration API</h1></div> <div class="max-w-4xl mx-auto bg-black rounded-lg h-450px"><span class="block bg-center bg-cover w-full h-full rounded-lg" style="background-image:url(https://res.cloudinary.com/keystone-demo/image/upload/q_auto/c_scale,w_1200,dpr_auto/v1436883619/ozsvbe6agununyea7c17.jpg);"></span></div> <div class="text-center mt-16"><div class="bg-black inline-block w-16 h-16 rounded-full border-2 border-primary-500"><span alt="Ilias Ism" class="block bg-center bg-cover w-full h-full rounded-full" style="background-image:url(/img/avatar.jpg);"></span></div> <div class="font-bold text-xs mt-2">Ilias Ism</div></div> <div class="max-w-3xl mx-auto flex flex-wrap m-4"><div class="font-sans prose sm:prose-lg xl:prose-xl"><div><p>The <a href="https://www.w3.org/TR/vibration/" title="For more documentation visit the W3C document on vibration">Vibration API</a> is an API specifically made for mobile devices as they are <em>thankfully</em> the only devices that have a vibrate function. The API allows developers to vibrate a device <em>(in a pattern)</em> for a given duration.</p>
+<ul>
+<li><strong><em>Note</em></strong>: <em>This article is best viewed on a mobile device. Go to</em> <strong><a href="https://il.ly/vibrate">il.ly/vibrate</a></strong> <em>on your mobile device to quickly go to this article.</em></li>
+</ul>
+<h1 id="so-how-is-browser-support-">So how is browser support?</h1>
+<table>
+<thead>
+<tr>
+<th>Device</th>
+<th>Support</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>iOS Safari</td>
+<td><strong>NO</strong></td>
+</tr>
+<tr>
+<td>Opera Mini</td>
+<td><strong>NO</strong></td>
+</tr>
+<tr>
+<td>IE</td>
+<td><strong>NO</strong></td>
+</tr>
+<tr>
+<td>BlackBerry</td>
+<td><strong>NO</strong></td>
+</tr>
+<tr>
+<td>Android Browser</td>
+<td><strong>Since Android 4.4</strong></td>
+</tr>
+<tr>
+<td>Opera</td>
+<td><strong>Yes!</strong></td>
+</tr>
+<tr>
+<td>Chrome</td>
+<td><strong>Yes!</strong></td>
+</tr>
+<tr>
+<td>Chrome for Android</td>
+<td><strong>Yes!</strong></td>
+</tr>
+<tr>
+<td>Firefox</td>
+<td><strong>Yes!</strong></td>
+</tr>
+<tr>
+<td>Your Browser</td>
+<td><i class="icon example-1"></i></td>
+</tr>
+</tbody>
+</table>
+<p>The vibration API is implemented in <code>navigator.vibrate</code>. So calling the function makes your phone vibrate. You can test if your browser is recent enough to have the <code>vibrate</code> function in <code>navigator</code>.</p>
+<p>Mozilla had their own implementation <code>mozVibrate</code> so some browsers may support that instead.</p>
+<pre><code class="lang-javascript">var canVibrate = &quot;vibrate&quot; in navigator || &quot;mozVibrate&quot; in navigator;
+
+if (canVibrate &amp;&amp; !(&quot;vibrate&quot; in navigator))
+    navigator.vibrate = navigator.mozVibrate;
+</code></pre>
+<p>However, this doesn&#39;t mean that your device can vibrate. Just that it&#39;s recent enough. There are a few requirements you need to meet.</p>
+<ol>
+<li>You need the hardware for it.</li>
+<li>The page needs to be visible.</li>
+<li>Browser-specific implementation prevents the vibration.</li>
+</ol>
+<h1 id="usage">Usage</h1>
+<p>The <code>navigator.vibrate</code> function either accepts a number or an array of numbers.</p>
+<blockquote>
+<p>In the following example the device will vibrate for <strong>1000</strong> milliseconds (ms):</p>
+<p><a class="example-2 ui small teal pointing below label">Test Code</a></p>
+</blockquote>
+<pre><code class="lang-javascript">// vibrate for 1000 ms
+navigator.vibrate(1000);
+
+// or alternatively
+navigator.vibrate([1000]);
+</code></pre>
+<p>The vibration pattern is formed by milliseconds of duration of the vibration and the duration of the waiting period.</p>
+<blockquote>
+<p>In this example the devices will vibrate for <strong>1000</strong> ms, wait <strong>500</strong> ms and vibrate again.</p>
+<p><a class="example-3 ui small teal pointing below label">Test Code</a></p>
+</blockquote>
+<pre><code class="lang-javascript">// device will     vibrate    wait    vibrate
+navigator.vibrate([1000,      500,    1000]);
+</code></pre>
+<p>Any new call stops the previous vibration sequence. If the page is no longer visible, like locking the device, minimizing the window, moving to another tab then the vibration also stops.</p>
+<blockquote>
+<p>In this example the devices will stop vibrating.</p>
+<p><a class="example-4 ui small teal pointing below label">Test Code</a></p>
+</blockquote>
+<pre><code class="lang-javascript">// Stop vibrating
+navigator.vibrate();
+navigator.vibrate(0);
+navigator.vibrate([]);
+</code></pre>
+<h2 id="start-stop">Start / Stop</h2>
+<p>We can keep vibrating until the user stops touching the device. The vibration stops after a while though. But it&#39;s not meant to be pressed infinitely anyway.</p>
+<blockquote>
+<p>In this example the device will keep vibrating until the touch event has stopped</p>
+<p><a class="example-5a ui small teal pointing below label">Test Code</a></p>
+</blockquote>
+<pre><code class="lang-javascript">var isMobile = (/iPhone|iPod|iPad|Android|BlackBerry/).test(navigator.userAgent);
+
+$(&quot;.button&quot;).on(isMobile ? &#39;touchstart&#39; : &#39;mousedown&#39;, function(e) {
+    navigator.vibrate(Infinity); // Infinity is a number
+});
+
+$(&quot;.button&quot;).on(isMobile ? &#39;touchend&#39; : &#39;mouseup&#39;, function(e) {
+    navigator.vibrate(0);
+});
+</code></pre>
+<h2 id="buttons">Buttons</h2>
+<p>The best use case I can imagine for this API is for buttons. You get a little haptic feedback like you get for native apps. This can be done by setting the vibration to a very low number. For me <strong>50ms</strong> seems ideal.</p>
+<blockquote>
+<p>In this example all buttons and links on this page vibrate on tap. We also detect if the device is mobile and use touchend.</p>
+<p><a class="example-5 ui small teal pointing below label">Test Code</a></p>
+</blockquote>
+<pre><code class="lang-javascript">var isMobile = (/iPhone|iPod|iPad|Android|BlackBerry/).test(navigator.userAgent);
+
+$(&quot;.button, a&quot;).on(isMobile ? &#39;touchend&#39; : &#39;click&#39;, function(e) {
+    navigator.vibrate(50);
+});
+</code></pre>
+<p class="ui buttons fluid four">
+    <a class="ui small tiny orange button">Tap</a>
+    <a class="ui small tiny teal button">Tap</a>
+    <a class="ui small tiny red button">Tap</a>
+    <a class="ui small tiny purple button">Tap</a>
+</p>
+
+
+<h2 id="checkboxes">Checkboxes</h2>
+<p>Vibrating after clicking a sliding checkbox is also very helpful. It feels really natural. There is a short vibration at the start, then a period of waiting whilst the checkbox is moving and then a longer vibration at the end.</p>
+<blockquote>
+<p>In this example, the checkbox will vibrate.</p>
+</blockquote>
+<div class="ui segment fluid" style="max-width: 700px; margin: 15px auto;" >
+    <div class="ui slider checkbox">
+        <input id="product-1" checked type="checkbox">
+        <label for="product-1">Duvel</label>
+    </div>
+    <div class="ui divider"></div>
+    <div class="ui slider checkbox">
+        <input id="product-2" type="checkbox">
+        <label for="product-2">Jupiler</label>
+    </div>
+</div>
+
+<pre><code class="lang-html">&lt;div class=&quot;ui slider checkbox&quot;&gt;
+    &lt;input id=&quot;product-1&quot; type=&quot;checkbox&quot;&gt;
+    &lt;label for=&quot;product-1&quot;&gt;Duvel&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui slider checkbox&quot;&gt;
+    &lt;input id=&quot;product-2&quot; type=&quot;checkbox&quot;&gt;
+    &lt;label for=&quot;product-2&quot;&gt;Jupiler&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="lang-javascript">$(&quot;.ui.checkbox&quot;).click(function() {
+    navigator.vibrate([5, 200, 20]);
+});
+</code></pre>
+<h2 id="how-long-is-long-enough-">How Long is Long Enough?</h2>
+<p>If you&#39;re not sure how long the haptic feedback should be. You can experiment with various timespans. Try all of these buttons out a mobile device. Anything above <strong>100ms</strong> seems to long for me.</p>
+<blockquote>
+<p>In this example the following buttons vibrate each on a different timespan.</p>
+</blockquote>
+<div class="ui container">
+<div class="ui buttons example-6 six">
+    <a class="ui small tiny black button">10</a>
+    <a class="ui small tiny black button">20</a>
+    <a class="ui small tiny black button">30</a>
+    <a class="ui small tiny black button">40</a>
+    <a class="ui small tiny black button">50</a>
+    <a class="ui small tiny black button">75</a>
+</div>
+<div class="ui buttons example-6 six">
+    <a class="ui small tiny black button">100</a>
+    <a class="ui small tiny black button">150</a>
+    <a class="ui small tiny black button">200</a>
+    <a class="ui small tiny black button">500</a>
+    <a class="ui small tiny black button">1000</a>
+    <a class="ui small tiny black button">2000</a>
+</div>
+</div>
+
+
+<h2 id="notifications">Notifications</h2>
+<p>Another great use case are for notifications. These can be a bit longer than haptic feedback. Patterns can also be used to differentiate.</p>
+<p><em>Please</em> be aware of the vibration notification on the phone and try not to replicate them as to not to confuse the user. Some visual feedback together with the vibration would be ideal.</p>
+<blockquote>
+<p><strong>Click the buttons below.</strong> When the progress bar reaches the end. You get a notification! Each button is a different vibration pattern.</p>
+</blockquote>
+<div style="max-width: 700px; margin: 15px auto;">
+<div class="ui striped example-7 disabled red progress">
+  <div class="bar" style="width: 0%;"></div>
+</div>
+<p class="ui buttons example-7 four">
+    <a class="ui one teal button">Go!</a>
+    <a class="ui two red button">Go!</a>
+    <a class="ui three button">Go!</a>
+    <a class="ui four purple button">Go!</a>
+</p>
+</div>
+
+
+<pre><code>// Vibrate on completion
+var pattern = [500, 100, 500];
+$(&quot;.progress .bar&quot;)
+    .css({width: &quot;0%&quot;})
+    .animate({width: &quot;100%&quot;}, {
+        duration: 1000,
+        complete: function() {
+            if (canVibrate) navigator.vibrate(pattern);
+        }
+    });
+</code></pre><h1 id="jquery-vibrate-js">jQuery.vibrate.js</h1>
+<p>If doing it manually seems difficult for you, I&#39;ve written a jquery plugin that can get you started right away.</p>
+<p class="ui buttons github fluid three">
+    <a href="https://github.com/illyism/jquery.vibrate.js" class="ui icon outline button"><i class="icon github"></i> Github</a>
+    <a href="https://github.com/Illyism/jquery.vibrate.js/archive/master.zip" class="ui outline icon button"><i class="icon download"></i> Download</a>
+    <a href="https://illyism.github.com/jquery.vibrate.js" class="ui icon outline button"><i class="icon basic docs"></i> Documentation</a>
+</p>
+
+<blockquote>
+<p>Download and embed the code then initialize in one of the following ways.</p>
+</blockquote>
+<pre><code class="lang-javascript">// Vibration for 50ms on all .button on click
+$(&quot;.button&quot;).vibrate();
+
+// Vibrate for 20ms on click
+$(&quot;.button&quot;).vibrate(&quot;short&quot;);
+
+// Vibrate for 50ms on click
+$(&quot;.button&quot;).vibrate(&quot;medium&quot;);
+$(&quot;.button&quot;).vibrate(&quot;default&quot;);
+$(&quot;.button&quot;).vibrate(50);
+
+// Vibrate for 100ms on click
+$(&quot;.button&quot;).vibrate(&quot;long&quot;);
+
+// Vibrate for 1000ms on touchstart. Stop vibrating on touchend.
+$(&quot;.button&quot;).vibrate({
+    duration: 1000,
+    trigger: &quot;touchstart&quot;
+});
+</code></pre>
+<h2 id="song-patterns">Song Patterns</h2>
+<p><a href="https://www.reddit.com/user/Groggie">Groggie</a> mentioned his <a href="https://gearside.com/cool-vibration-patterns-for-mobile-devices/ Custom vibration patterns for mobile devices">blog post</a> on using the Vibration API for music and theme songs. It&#39;s a really cool example of what can be done using the Vibration API and some creative thought. Click on the titles below to play.</p>
+<ul>
+<li><a class="song-1"><i class="icon play sign small"></i>Super Mario Theme Intro</a></li>
+</ul>
+<pre><code class="lang-javascript">navigator.vibrate([125,75,125,275,200,275,125,75,125,275,200,600,200,600]);
+</code></pre>
+<ul>
+<li><a class="song-2"><i class="icon play sign small"></i>James Bond 007</a></li>
+</ul>
+<pre><code class="lang-javascript">navigator.vibrate([200,100,200,275,425,100,200,100,200,275,425,100,75,25,75,125,75,25,75,125,100,100]);
+</code></pre>
+<ul>
+<li><a class="song-3"><i class="icon play sign small"></i>Star Wars Imperial March</a></li>
+</ul>
+<pre><code class="lang-javascript">navigator.vibrate([500,110,500,110,450,110,200,110,170,40,450,110,200,110,170,40,500]);
+</code></pre>
+<ul>
+<li><a class="song-4"><i class="icon play sign small"></i>Morse Code SOS</a></li>
+</ul>
+<pre><code class="lang-javascript">navigator.vibrate([100,30,100,30,100,200,200,30,200,30,200,200,100,30,100,30,100]);
+</code></pre>
+<hr>
+<p>Here are some other links to get you some inspiration:</p>
+<ul>
+<li>A game: <a href="https://basicallydan.github.io/skifree.js/">SkiFree</a></li>
+<li>Vibrator / Beethoven simulator <a href="https://docmenthol.serverbros.co.uk/">Dildonica</a></li>
+</ul>
+<hr>
+<p>I also made a slideshow:  <strong> <a href="https://www.slideshare.net/illyism/using-32047309" title="Using The Vibration API For The Greater Good" target="_blank">Learn About The Vibration API</a> </strong> from <strong><a href="https://www.slideshare.net/illyism" target="_blank">Ilias Ism</a></strong>. Feel free to share it and show it around.</p>
+<iframe src="https://www.slideshare.net/slideshow/embed_code/32047309?rel=0" width="100%" height="600px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen></iframe>
+
+<style>
+iframe {max-width: 750px; margin: auto; display: block;}
+</style>
+</div></div></div></div> <footer class="bg-primary-950"><div class="py-8 px-4 lg:px-0"><div class="mx-auto max-w-3xl flex items-end"><div class="flex-1"><!----> <a href="/" class="text-primary-200 text-lg hover:text-primary-100 font-bold">Ilias Ism</a></div> <div><a href="/contact/" class="text-primary-500 hover:text-primary-400">Contact</a></div></div></div></footer></div>
+</body>
+</html>
